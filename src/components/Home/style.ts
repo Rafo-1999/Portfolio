@@ -1,50 +1,59 @@
-import {createUseStyles} from "react-jss"
+import { createUseStyles } from "react-jss";
 
-
-const useStyles=createUseStyles({
-    root:{
-        // position: "relative"   
-
-    },
-    centerText:{
-        position: "absolute",
-        top: "30%",
-        left: "15%",
-        color: "white",
-
-    },
-    personImageDiv:{
-        position: "absolute",
-        top: "20%",
-        right: "15%",
-    },
-    personImage:{
-        borderRadius: "50%"
-    },
-    aboutButton:{
-        backgroundColor: "#4B0082",
-        color: "white",
-        textDecoration: 'none',
-        padding: "10px",
-        borderRadius: "50px"        
-    },
-    socialIcons:{
-        fontSize: "2rem",
-        display: "inline-block",
-        lineHeight: "44px",
-        color: "#00d9ff",
-        backgroundColor: "white",
-        width: "44px",
-        height: "44px",
-        textAlign: "center",
-        marginRight: "8px",
-        borderRadius: "100%",
-        
-       
-
-        
-    }
-
-})
+const useStyles = createUseStyles({
+  root: {
+    // position: "relative"
+  },
+  centerText: {
+    position: "absolute",
+    top: "30%",
+    left: "15%",
+    color: "white",
+    fontSize: "20px",
+  },
+  centerAboutButton: {
+    position: "absolute",
+    top: "50%",
+    left: "15%",
+    color: "white",
+  },
+  centerSocialIcons: {
+    position: "absolute",
+    top: "55%",
+    left: "13%",
+    color: "white",
+    gap: "10px",
+  },
+  personImageDiv: {
+    position: "absolute",
+    top: "25%",
+    right: "1%",
+  },
+  personImage: {
+    borderRadius: "50%",
+  },
+  aboutButton: {
+    backgroundColor: "#8C00FF",
+    color: "white",
+    textDecoration: "none",
+    padding: "20px",
+    borderRadius: "10%",
+    fontSize: "20px",
+    cursor: "pointer",
+  },
+  socialIcons: {
+    fontSize: "2rem",
+    display: "inline-block",
+    lineHeight: "48px",
+    color: "#8C00FF",
+    backgroundColor: "white",
+    width: "44px",
+    height: "44px",
+    textAlign: "center",
+    marginRight: "20px",
+    // gap: "50px",
+    borderRadius: "100%",
+  },
+});
 
 export default useStyles;

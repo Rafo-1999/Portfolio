@@ -1,25 +1,36 @@
 import React from "react";
 import Home from "../components/Home/Home";
-import useStyles from "../components/Header/style";
+import useStyles from "./style";
 import Header from "../components/Header/Header";
 import About from "../components/About/About";
-// import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Skills from "../components/Skills/Skills";
+import Education from "../components/Education/Education";
+import Experience from "../components/Experience/Experience";
+import Footer from "../components/Footer/Footer";
 
 const MainContent = () => {
   const classes = useStyles();
 
   return (
-    <div>
+    <div className={classes.root}>
       <Header />
-      <section id="home">
+      <section id="home" style={{ height: "100vh" }}>
         <Home />
       </section>
-      <section id="about">
+      <section id="about" style={{ height: "100vh" }}>
         <About />
       </section>
-      <section id="skills">
+      <section id="skills" style={{ height: "107vh" }}>
         <Skills />
+      </section>
+      <section id="education" style={{ height: "137vh" }}>
+        <Education />
+      </section>
+      <section id="experience" style={{ height: "90vh" }}>
+        <Experience />
+      </section>
+      <section  >
+        <Footer />
       </section>
     </div>
   );
@@ -27,9 +38,3 @@ const MainContent = () => {
 
 export default MainContent;
 
-{
-  /* <Routes>
-          <Route path="/" element={<Home/>} />
-         
-        </Routes> */
-}
