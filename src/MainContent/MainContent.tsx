@@ -14,22 +14,22 @@ const MainContent = () => {
   return (
     <div className={classes.root}>
       <Header />
-      <section id="home" style={{ height: "100vh" }}>
+      <section id="home">
         <Home />
       </section>
       <section id="about" style={{ height: "100vh" }}>
         <About />
       </section>
-      <section id="skills" style={{ height: "107vh" }}>
+      <section id="skills">
         <Skills />
       </section>
-      <section id="education" style={{ height: "137vh" }}>
+      <section id="education">
         <Education />
       </section>
       <section id="experience" style={{ height: "90vh" }}>
         <Experience />
       </section>
-      <section  >
+      <section>
         <Footer />
       </section>
     </div>
@@ -37,4 +37,3 @@ const MainContent = () => {
 };
 
 export default MainContent;
-

@@ -1,31 +1,32 @@
-import React, { useEffect, useState } from 'react'
-import useStyles from './style'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin, faGithub,   } from '@fortawesome/free-brands-svg-icons';
+import React, { useEffect, useState } from "react";
+import useStyles from "./style";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 // @ts-ignore
-import homeImage from "../../Images/img.jpeg"; 
+import homeImage from "../../Images/img.jpeg";
 import { Link } from "react-scroll";
 
-
 const Home = () => {
-    const classes =useStyles();
+  const classes = useStyles();
 
-    const [profession,setProfession]=useState("Java Development");
+  const [profession, setProfession] = useState("Java Development");
 
-    const professions=["Frontend Development", "Backend Development", "Web Development"];
+  const professions = [
+    "Frontend Development",
+    "Backend Development",
+    "Web Development",
+  ];
 
-    useEffect(() => {
-      const intervalId = setInterval(() => {
-        const currentIndex = professions.indexOf(profession);
-        const nextIndex = (currentIndex + 1) % professions.length;
-  
-        setProfession(professions[nextIndex]);
-      }, 1200); 
-  
-      return () => clearInterval(intervalId);
-    }, [profession]); 
-  
-    
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      const currentIndex = professions.indexOf(profession);
+      const nextIndex = (currentIndex + 1) % professions.length;
+
+      setProfession(professions[nextIndex]);
+    }, 1200);
+
+    return () => clearInterval(intervalId);
+  }, [profession]);
 
   return (
     <div className={classes.root}>
@@ -47,11 +48,11 @@ const Home = () => {
           <span>About Me </span>
         </a> */}
 
-      <div className={classes.centerAboutButton}>
+      {/* <div className={classes.centerAboutButton}>
         <Link className={classes.aboutButton} to="about" smooth={true} duration={1000}>
           About Me
         </Link>
-      </div>
+      </div> */}
 
       <div className={classes.centerSocialIcons}>
         <ul>
@@ -65,7 +66,11 @@ const Home = () => {
             </a>
           </li>
           <li className={classes.socialIcons}>
-            <a aria-label="GitHub" href="https://github.com/Rafo-1999" target="_blank">
+            <a
+              aria-label="GitHub"
+              href="https://github.com/Rafo-1999"
+              target="_blank"
+            >
               <FontAwesomeIcon icon={faGithub} />
             </a>
           </li>
@@ -73,10 +78,16 @@ const Home = () => {
       </div>
 
       <div className={classes.personImageDiv}>
-        <img src={homeImage} alt="" width="50%" height="50%" className={classes.personImage} />
+        <img
+          src={homeImage}
+          alt=""
+          width="50%"
+          height="50%"
+          className={classes.personImage}
+        />
       </div>
     </div>
   );
-}
+};
 
 export default Home;

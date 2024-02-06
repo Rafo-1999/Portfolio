@@ -27,7 +27,7 @@ const useStyles = createUseStyles({
   personImageDiv: {
     position: "absolute",
     top: "25%",
-    right: "1%",
+    right: "0%",
   },
   personImage: {
     borderRadius: "50%",

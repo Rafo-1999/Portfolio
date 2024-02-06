@@ -2,7 +2,6 @@ import { createUseStyles } from "react-jss";
 
 const useStyles = createUseStyles({
   root: {
-    height: "100vh",
     backgroundColor: "#8C00FF",
     padding: "30px",
   },
@@ -47,7 +46,7 @@ const useStyles = createUseStyles({
   },
   skillImage: {
     width: "100%",
-    height: "19vh",
+    height: "28vh",
     alignItems: "center",
     display: "flex",
     justifyContent: "center",
